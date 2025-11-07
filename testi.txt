@@ -1,2 +1,10 @@
 jotakin
 testiasdf
+ /* cursor = conn.cursor()
+ cursor.execute("SELECT NOW()")
+ result = cursor.fetchone()
+ # Clean up
+ cursor.close()
+ conn.close()
+ return f"<h1>{result[0]}</h1>"
+*/

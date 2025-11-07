@@ -13,7 +13,7 @@ def home():
  )
  
 @app.route('/')
- def api_time():
+def api_time():
     conn = get_db_connection()
     cur = conn.cursor()
     cur.execute("SELECT NOW();")
@@ -29,11 +29,3 @@ if __name__ == '__main__':
  app.run(host='0.0.0.0', port=5000)
 
 
- /* cursor = conn.cursor()
- cursor.execute("SELECT NOW()")
- result = cursor.fetchone()
- # Clean up
- cursor.close()
- conn.close()
- return f"<h1>{result[0]}</h1>"
-*/
