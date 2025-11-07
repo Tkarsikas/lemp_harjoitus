@@ -6,9 +6,9 @@ def home():
  # Connect to MySQL/MariaDB
  conn = mysql.connector.connect(
  host="localhost",
- user="exampleuser",
- password="change_this_strong_password",
- database="exampledb"
+ user="tommi",
+ password="moccamaster",
+ database="kurssi_LEMP"
  )
  cursor = conn.cursor()
  cursor.execute("SELECT 'Hello from MySQL!'")
