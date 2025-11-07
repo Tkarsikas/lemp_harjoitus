@@ -12,7 +12,7 @@ def home():
  )
  cursor = conn.cursor()
  cursor.execute("SELECT 'testisivu toimii!'")
- 
+ cursor.execute("SELECT CONCAT('testisivu toimii! ', DATE_FORMAT(NOW(), '%Y-%m-%d %H:%i:%s'))")
  result = cursor.fetchone()
  # Clean up
  cursor.close()
