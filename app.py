@@ -1,32 +1,21 @@
-from flask import Flask, jsonify, render_template
+from flask import Flask
 import mysql.connector
-
 app = Flask(__name__)
-
+@app.route('/')
 def home():
  # Connect to MySQL/MariaDB
  conn = mysql.connector.connect(
  host="localhost",
- user="tommi",
- password="moccamaster",
- database="kurssi_LEMP"
+ user="exampleuser",
+ password="change_this_strong_password",
+ database="exampledb"
  )
- 
-@app.route('/')
-def api_time():
-    conn = home()
-    cur = conn.cursor()
-    cur.execute("SELECT NOW();")
-    row = cur.fetchone()
-    cur.close()
-    conn.close()
-
-    if row:
-        return jsonify({"time": str(row[0])})
-    else:
-        return jsonify({"time": None}), 500
-
+ cursor = conn.cursor()
+ cursor.execute("SELECT NOW();")
+ result = cursor.fetchone()
+ # Clean up
+ cursor.close()
+ conn.close()
+ return f"<h1>{result[0]}</h1>"
 if __name__ == '__main__':
  app.run(host='0.0.0.0', port=5000)
-
-
