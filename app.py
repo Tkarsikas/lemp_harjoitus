@@ -33,7 +33,6 @@ def home():
                 const data = await response.json();
                 document.getElementById('clock').innerText = data.time;
             }
-            <img src="/home/ubuntu/lemp_git/lemp_harjoitus/ursos-fritando-bear.gif" alt="animated gif" />
 
             // Päivitä kello heti ja sen jälkeen joka sekunti
             setInterval(updateClock, 1000);
@@ -43,6 +42,7 @@ def home():
     <body style="font-family: Arial; text-align: center; margin-top: 100px; bachkground-color: #f0f0f0;">
         <h1>MySQL Server Time</h1>
         <h2 id="clock">Loading...</h2>
+        <img src="/home/ubuntu/lemp_git/lemp_harjoitus/ursos-fritando-bear.gif" alt="animated gif" />
     </body>
     </html>
     '''
