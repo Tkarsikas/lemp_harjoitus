@@ -11,7 +11,8 @@ def home():
  database="kurssi_LEMP"
  )
  cursor = conn.cursor()
- cursor.execute("SELECT 'Testisivu toimiiiiiii!'")
+ cursor.execute("SELECT 'Hello from MySQL!'")
+ cursor.execute("SELECT NOW()")
  result = cursor.fetchone()
  # Clean up
  cursor.close()
