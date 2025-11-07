@@ -42,7 +42,7 @@ def home():
     <body style="font-family: Arial; text-align: center; margin-top: 100px; background-color: #f0f0f0;">
         <h1>MySQL Server Time</h1>
         <h2 id="clock">Loading...</h2>
-        <img src="/static/ursos-fritando-bear.gif" alt="animated gif" />
+        <img src="/static/ursos-fritando-bear.gif" alt="animated gif" style="width: 200px;" />
     </body>
     </html>
     '''
