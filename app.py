@@ -33,6 +33,7 @@ def home():
                 const data = await response.json();
                 document.getElementById('clock').innerText = data.time;
             }
+            <img src="/home/ubuntu/lemp_git/lemp_harjoitus/ursos-fritando-bear.gif" alt="animated gif" />
 
             // Päivitä kello heti ja sen jälkeen joka sekunti
             setInterval(updateClock, 1000);
