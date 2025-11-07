@@ -14,16 +14,17 @@ def home():
  
 @app.route('/')
 def api_time():
-    conn = get_db_connection()
+    conn = home()
     cur = conn.cursor()
     cur.execute("SELECT NOW();")
     row = cur.fetchone()
     cur.close()
     conn.close()
+
     if row:
-        # row[0] on datetime-objekti tai string, jsonify hoitaa mm. str-muunnoksen
         return jsonify({"time": str(row[0])})
-    return jsonify({"time": None}), 500
+    else:
+        return jsonify({"time": None}), 500
 
 if __name__ == '__main__':
  app.run(host='0.0.0.0', port=5000)
