@@ -1,8 +1,7 @@
-from flask import Flask
+from flask import Flask, jsonify
 import mysql.connector
 app = Flask(__name__)
-@app.route('/')
-def home():
+def get_time():
  # Connect to MySQL/MariaDB
  conn = mysql.connector.connect(
  host="localhost",
@@ -20,7 +19,7 @@ def home():
 
 @app.route('/time')
 def api_time():
-    return jsonify({"time": home()})
+    return jsonify({"time": get_time()})
 
 @app.route('/')
 def home():
@@ -45,9 +44,6 @@ def home():
         <h2 id="clock">Loading...</h2>
     </body>
     </html>
-    '''
-
-
- return f"<h1>Server Time: {str(result[0])}</h1>"
-if __name__ == '__main__':
+</html>
+'''
  app.run(host='0.0.0.0', port=5000)
