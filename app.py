@@ -12,7 +12,7 @@ def home():
  )
  cursor = conn.cursor()
  cursor.execute("SELECT 'testisivu toimii!'")
- cursor.execute("SELECT NOW()")
+ 
  result = cursor.fetchone()
  # Clean up
  cursor.close()
