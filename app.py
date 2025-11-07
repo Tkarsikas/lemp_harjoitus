@@ -16,6 +16,7 @@ def home():
  # Clean up
  cursor.close()
  conn.close()
- return f"<h1>{result[0]}</h1>"
+
+ return f"<h1>Server Time: {str(result[0])}</h1>"
 if __name__ == '__main__':
  app.run(host='0.0.0.0', port=5000)
