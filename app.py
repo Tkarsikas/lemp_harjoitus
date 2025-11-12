@@ -14,11 +14,6 @@ def get_time():
  password=os.getenv("DB_PASS"),
  database=os.getenv("DB_NAME")
  
- /*host="localhost",
- user="tommi",
- password="moccamaster",
- database="kurssi_LEMP"
- */
  )
  cursor = conn.cursor()
  cursor.execute("SELECT NOW();")
