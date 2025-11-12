@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
-
+print("DB_HOST:", os.getenv("DB_HOST"))
 app = Flask(__name__)
 def get_time():
  # Connect to MySQL/MariaDB
