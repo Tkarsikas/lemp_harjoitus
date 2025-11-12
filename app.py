@@ -6,7 +6,7 @@ def get_time():
  conn = mysql.connector.connect(
  host=config.host,
  user=config.user,
- password=condfig.password,
+ password=config.password,
  database=config.database
  )
  cursor = conn.cursor()
