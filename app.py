@@ -1,13 +1,24 @@
 from flask import Flask, jsonify
 import mysql.connector
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
 app = Flask(__name__)
 def get_time():
  # Connect to MySQL/MariaDB
  conn = mysql.connector.connect(
- host="localhost",
+ host=os.getenv("DB_HOST"),
+ user=os.getenv("DB_USER"),
+ password=os.getenv("DB_PASS"),
+ database=os.getenv("DB_NAME")
+ 
+ /*host="localhost",
  user="tommi",
  password="moccamaster",
  database="kurssi_LEMP"
+ */
  )
  cursor = conn.cursor()
  cursor.execute("SELECT NOW();")
