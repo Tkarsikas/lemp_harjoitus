@@ -6,7 +6,7 @@ def mySql():
     # Initialize connection.
     conn = st.connection('mysql', type='sql')
     # Perform query.
-    df = conn.query('SELECT viikko, nimi, toistot from kyykky LIMIT 100;', ttl=600)
+    df = conn.query('SELECT viikko, nimi, toistot, paino from kyykky LIMIT 100;', ttl=600)
     return df
     # Streamlit
 def main():
@@ -15,7 +15,7 @@ def main():
     data = mySql()
     #plot data
     if not data.empty:
-        fig = px.line(data, x="viikko", y="toistot", color="nimi",
+        fig = px.line(data, x="viikko", y="paino", color="nimi",
                       title='Kyykky kehitys viikkojen mukaan', markers=True)
         st.plotly_chart(fig, use_container_width=True)
     else:
