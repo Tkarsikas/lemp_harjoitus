@@ -14,8 +14,8 @@ def mySql():
     return df_kyykky, df_penkki
     # Streamlit
 def main():
-    st.title("Plot data from MySql")
-    st.write("kyykky kehitys viikkojen mukaan")
+    st.title("dataa mysql tietokannasta")
+    st.write("kyykky ja penkki kehitys viikottain")
     df_kyykky, df_penkki = mySql()
     #plot data
     if not df_kyykky.empty or not df_penkki.empty:
