@@ -41,7 +41,6 @@ def home():
     </head>
     <body style="font-family: Arial; text-align: center; margin-top: 100px; background-color: pink;">
         <h1>MySQL Server Time</h1>
-        <h1>MySQL Server Time</h1>
 
         <!-- Kello -->
         <h2 id="clock" style="margin-bottom: 10px;">Loading...</h2>
