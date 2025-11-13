@@ -41,9 +41,24 @@ def home():
     </head>
     <body style="font-family: Arial; text-align: center; margin-top: 100px; background-color: pink;">
         <h1>MySQL Server Time</h1>
-        <h2 id="clock">Loading...</h2>
-        <a href="http://86.50.23.190:8501/data-analysis/" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px; margin-top: 20px;">View Data Analysis</a>
-        <img src="/static/ursos-fritando-bear.gif" alt="animated gif" style="width: 600px;" />
+        <h1>MySQL Server Time</h1>
+
+        <!-- Kello -->
+        <h2 id="clock" style="margin-bottom: 10px;">Loading...</h2>
+
+        <!-- Nappi kellon ja giffin väliin -->
+        <div style="text-align:center; margin-bottom: 10px;">
+            <a href="http://86.50.23.190:8501/data-analysis/" 
+                style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px;">
+                View Data Analysis
+            </a>
+        </div>
+
+        <!-- Gif -->
+        <div style="text-align:center;">
+            <img src="/static/ursos-fritando-bear.gif" alt="animated gif" style="width: 600px;" />
+        </div>
+
     </body>
     </html>
     '''
