@@ -14,8 +14,11 @@ def main():
     st.write("kyykky kehitys viikkojen mukaan")
     data = mySql()
     #plot data
-    df2 = pd.DataFrame(data, columns=["viikko", "nimi", "toistot"])
-    totalKg = px.line(df2, x=df2.index, y="toistot", title='kyykky kehitys')
-    st.plotly_chart(totalKg, use_container_width=True)
+    if not data.empty:
+        fig = px.line(data, x="viikko", y="toistot", color="nimi",
+                      title='Kyykky kehitys viikkojen mukaan', markers=True)
+        st.plotly_chart(fig, use_container_width=True)
+    else:
+        st.write("Ei dataa näytettäväksi")
 if __name__ == "__main__":
     main()
